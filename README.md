@@ -5,10 +5,10 @@ MSP430 Motor
 
 ####Pre-Lab
 
-Which pins will output which signals you need?
+######Which pins will output which signals you need?
   TA0 subsystem. 
-  - Right: Forward: P2.5 Backward: P2.4
-  - Left: Forward: P2.0 Backward: P2.1
+  - Right: speed: P2.5 direction : P2.4
+  - Left: speed: P2.0 direction: P2.1
   - Why: Because they are on the right and left side fo the board and they seems like they would work. 
   - Signals
     -TACTL 
@@ -24,11 +24,11 @@ Which pins will output which signals you need?
       -TA1CCR1
       -TA1CCR2
 
-Which side of the motor will you attach these signals to?
+######Which side of the motor will you attach these signals to?
   PWM: Goes into the upper terminal of motor
   DC: THe bottom terminal of motor
 
-How will you use these signals to achieve forward / back / left / right movement?
+######How will you use these signals to achieve forward / back / left / right movement?
 
   -Forward: Same PWM to both motors; Opposite DC (0 to left, 1 to right) to each motor (they face eachother, are inverse)
   
@@ -39,7 +39,7 @@ How will you use these signals to achieve forward / back / left / right movement
   -Right: similar to left with opposite DC signal. 0,0
   
   
-Additional Hardware
+######Additional Hardware
   -SN754410: Allows the MSP430 to controll the motors
   
   -Capacitors: Smooth out the signal and prevent errors becasue of signal variance. 
@@ -49,7 +49,7 @@ Additional Hardware
   -Voltage regulator: keep voltage at 3.3v
   
   
-Code Ideas
+######Code Ideas
   Want to move motors individually but it will be done within different functions. 
   
     robotMoveForward(speed)
