@@ -66,5 +66,30 @@ MSP430 Motor
       
     
   
-  
+###Setup/Goals
+The goal of the lab was to wire up the robot and program in a specified course for the robot to take. The course was forward, backward, right 45 degrees, left 45 degrees, right 90 degrees, and left 90 degrees. 
 
+Ther initial set up was actually a bit difficult and took some thinking. It turns out my initial wire diagram was a bit wrong so I used the example gode given to wire it up in a new way. From the code I knew that it would spin both motors if wired correctly so I went about testing until both motors spun when the code was run! Here is the meat of the given code that I used to create my accurate wire diagram. 
+
+```C
+P1DIR &= ~BIT3;
+    P1REN |= BIT3;
+
+    P2DIR |= BIT2;							// P2.2 is associated with TA1CCR1
+    P2SEL |= BIT2;							// P2.2 is associated with TA1CCTL1
+
+    P2DIR |= BIT4;							// P2.4 is associated with TA1CCR2
+    P2SEL |= BIT4;							// P2.4 is associated with TA1CCTL2
+
+    TA1CTL = ID_3 | TASSEL_2 | MC_1;		// Use 1:8 presclar off MCLK
+    TA1CCR0 = 0x0100;						// set signal period
+
+    TA1CCR1 = 0x0020;
+    TA1CCTL1 = OUTMOD_7;					// set TACCTL1 to Reset / Set mode
+
+    TA1CCR2 = 0x0020;
+    TA1CCTL2 = OUTMOD_3;					// set TACCTL1 to Reset / Set mode
+```
+From the code it is clear that P2.2 and P2.4 are being used for motor control. After some trial and error my wireing came out as follows.
+
+<a href="url"><img src="http://i.imgur.com/jAkdrqz.png" align="left" height="262" width="724" ></a>
