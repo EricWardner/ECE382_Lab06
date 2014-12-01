@@ -93,7 +93,8 @@ P1DIR &= ~BIT3;
 From the code it is clear that P2.2 and P2.4 are being used for motor control. After some trial and error my wireing came out as follows.
 
 <br><a href="url"><img src="http://i.imgur.com/jAkdrqz.png" align="left" height="262" width="724" ></a></br>
-
+<br>
+<br>
 
 the final wiring implemented on the robot can be seen here
 
