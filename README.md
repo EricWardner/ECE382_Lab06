@@ -267,5 +267,7 @@ Ultimately the B functionality worked as expected and required. Watch this aweso
 This project took a lot of debugging once the code finally comipled. It took multiple tests and run throughs to get the right timing for each direction and I still do not think it is entirely perfect. The right motor was a little bit faster than the left motor so that presented some problems as well. For the most part, the given code helped a lot and it was a fairly easy program to write, but it took time to implement properly. I really wish I had gone for A functionality...
 
 
+
+
 Documentation: C2C Bodin helped explain how the bits had to get set and how the stop funtion worked. C2C bolinger also helped me to understand how to do a high/low setting of a ceratin bit. I used Dr. Coulson's code as a base example. 
 
