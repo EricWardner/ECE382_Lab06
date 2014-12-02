@@ -102,7 +102,39 @@ the final wiring implemented on the robot can be seen here
 <a href="url"><img src="http://i.imgur.com/ah73whn.jpg" align="center" height="486" width="555" ></a>
 
 ###Functionality
-The code part was based heavily off of the given code show above, I figured if it isn't broken, don't fix it. 
+The code part was based heavily off of the given code show above, I figured if it isn't broken, don't fix it.
+My code broke down in the following way
+######main.c
+directed the movement of the robot, only had a main function
+
+######robotMove.c
+defined the functions that would move the robot 
+<d1>
+  <dt>init
+    <dd>Sets all of the bits on P2 that will be used (in accordance with diagram)</dd>
+    <dd>Sets the clock and the signal period for the PWM signal</dd>
+  <dt>forward
+    <dd>P2.1 and P2.3 set to high (DIR=forward)</dd>
+    <dd>both ENBs are set to high to enable motor</dd>
+    <dd>both PWM outmods set to 7 (fast)</dd>
+  <dt>back
+    <dd>P2.1 and P2.3 set to low (DIR=backwards)</dd>
+    <dd>both ENBs are set to high to enable motor</dd>
+    <dd>both PWM outmods set to 3 (fast for back) (fast)</dd>
+  <dt>right
+    <dd>P2.1 set to high and P2.3 set to low (left motor goes forward right motor goes back)</dd>
+    <dd>both ENBs are set to high to enable motor</dd>
+    <dd>both outmod for CTL1 set to 7 (fast for forward), outmod for CTL2 set to 3 (fast for back)</dd>
+  <dt>left
+    <dd>P2.1 set to low and P2.3 set to high (left motor goes back right motor goes forward)</dd>
+    <dd>both ENBs are set to high to enable motor</dd>
+    <dd>both outmod for CTL1 set to 3 (fast for back), outmod for CTL2 set to 7 (fast for forward)</dd>
+  <dt>stop
+    <dd>both ENBs are set to low to disable motor</dd>
+    <dd>both both outmods set to 5</dd>
+</d1>
+
+
 
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/QqOlSv22k2A/0.jpg)](http://www.youtube.com/watch?v=QqOlSv22k2A)
