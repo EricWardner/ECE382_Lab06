@@ -99,9 +99,10 @@ From the code it is clear that P2.2 and P2.4 are being used for motor control. A
 the final wiring implemented on the robot can be seen here
 
 
-<a href="url"><img src="http://i.imgur.com/ah73whn.jpg" align="left" height="486" width="555" ></a>
+<a href="url"><img src="http://i.imgur.com/ah73whn.jpg" align="center" height="486" width="555" ></a>
 
-
+###Functionality
+The code part was based heavily off of the given code show above, I figured if it isn't broken, don't fix it. 
 
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/QqOlSv22k2A/0.jpg)](http://www.youtube.com/watch?v=QqOlSv22k2A)
