@@ -109,7 +109,8 @@ directed the movement of the robot, only had a main function
 
 ######robotMove.c
 defined the functions that would move the robot 
-<d1>
+
+<dl>
   <dt>init
     <dd>Sets all of the bits on P2 that will be used (in accordance with diagram)</dd>
     <dd>Sets the clock and the signal period for the PWM signal</dd>
@@ -132,7 +133,7 @@ defined the functions that would move the robot
   <dt>stop
     <dd>both ENBs are set to low to disable motor</dd>
     <dd>both both outmods set to 5</dd>
-</d1>
+</dl>
 
 
 
